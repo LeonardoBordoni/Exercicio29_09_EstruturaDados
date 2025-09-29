@@ -18,7 +18,7 @@ public class ListaCircularLogs<T> {
 
 	public void adiciona(T elemento) {
 		if (bloqueado == true) {
-			System.out.println("EST¡ IMPRIMINDO, ADI«√O BLOQUEADA!!!!!!!");
+			System.out.println("EST√Å IMPRIMINDO, ADI√á√ÉO BLOQUEADA!!!!!!!");
 			return;
 		}
 		
@@ -30,9 +30,9 @@ public class ListaCircularLogs<T> {
 			this.inicio.setProximo(inicio);
 		} else if (tamanho < MAX_ELEMENTS) {
 			No<T> Novo = new No<>(elemento);
-			this.ultimo.setProximo(Novo);
-			this.ultimo = Novo;
-			Novo.setProximo(this.inicio);
+			Novo.setProximo(inicio);
+			ultimo.setProximo(Novo);
+			ultimo = Novo;
 			this.tamanho++;
 		} else {
 			inicio.setElemento(elemento);
